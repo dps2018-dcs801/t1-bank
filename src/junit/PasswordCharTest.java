@@ -10,14 +10,14 @@ public class PasswordCharTest {
 	
 	@Test
 	public void checkAtLeastOneNonANumeric() {
-		String password = "ab";
+		String password = "J12345";
 		Assert.assertEquals("Password must contain at least 1 non-alphanumeric character", PasswordManager.validate(password));
 	}
 	
 	
 	@Test
 	public void checkAtLeastOneANumeric() {
-		String password = "**";
+		String password = "$#$";
 		Assert.assertEquals("Password must contain at least 1 alphanumeric character", PasswordManager.validate(password));
 	}
 }
