@@ -43,16 +43,5 @@ public class PasswordLengthTest {
 		Assert.assertEquals("valid", PasswordManager.validate(password));
 	}
 	
-	@Test
-	public void checkOneSpace() {
-		String password = " $";
-		Assert.assertEquals("Password cannot contain space(s)", PasswordManager.validate(password));
-	}
 	
-	@Test
-	public void checkSpaceInPassword() {
-		String password = "1 $";
-		Assert.assertEquals("Password cannot contain space(s)", PasswordManager.validate(password));
-	}
-
 }
