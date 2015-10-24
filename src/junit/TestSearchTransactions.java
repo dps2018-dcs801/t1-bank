@@ -38,8 +38,11 @@ public class TestSearchTransactions {
 		String password="M$09230w";
 		String owner="Michael";
 				
-		Account newAccount = new Account("O1001", "Checking", "50.00");
+		//create account owner and account connected to the owner
 		AccountOwner newAccountOwner = new AccountOwner(owner, password);
+		Account newAccount = new Account("O1001", "Checking", "50.00");
+		
+		//make deposit and withdrawal
 		Deposit newDeposit = new Deposit("O1001", "A1001", "200.00");
 		Withdrawal newWithdrawal = new Withdrawal("O1001", "A1001", "100.00");
 		
@@ -52,6 +55,7 @@ public class TestSearchTransactions {
 		newWithdrawal.put();
 	 	newWithdrawal.updateBalance(password);
 
+	 	//what is the final balance?
 	 	System.out.println("balance: "+newAccount.getBalance());
 	 	
 	}
