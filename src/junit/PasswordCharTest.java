@@ -9,6 +9,7 @@ public class PasswordCharTest {
 	
 	
 	@Test
+	//test to check for non-alphanumeric characters in password
 	public void checkAtLeastOneNonANumeric() {
 		String password = "J12345";
 		Assert.assertEquals("Password must contain at least 1 non-alphanumeric character", PasswordManager.validate(password));
